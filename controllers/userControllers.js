@@ -15,7 +15,6 @@ module.exports.registerUser = (req, res) => {
             isAdmin: false
         });
         
-        // Add optional fields if provided
         if (req.body.firstName) newUser.firstName = req.body.firstName;
         if (req.body.lastName) newUser.lastName = req.body.lastName;
         

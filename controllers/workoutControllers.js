@@ -9,14 +9,14 @@ module.exports.addWorkout = (req, res) => {
     });
 
     return newWorkout.save()
-    .then((workout) => res.status(201).send(workout)) // Changed to match expected output
+    .then((workout) => res.status(201).send(workout)) 
     .catch(error => errorHandler(error, req, res));
 };
 
 module.exports.getMyWorkouts = (req, res) => {
     return Workout.find({userId: req.user.id})
     .then(workouts => {
-        // Always return an array, even if empty
+   
         return res.status(200).send({workouts});
     })
     .catch(error => errorHandler(error, req, res));
@@ -39,7 +39,7 @@ module.exports.updateWorkout = (req, res) => {
         .then(result => {
             res.status(200).send({ 
                 message: 'Workout updated successfully',
-                updatedWorkout: result // Changed to match expected output
+                updatedWorkout: result 
             });
         });
     })
@@ -78,7 +78,7 @@ module.exports.completeWorkoutStatus = (req, res) => {
         .then(result => {
             res.status(200).send({ 
                 message: 'Workout status updated successfully',
-                updatedWorkout: result // Changed to match expected output
+                updatedWorkout: result 
             });
         });
     })
