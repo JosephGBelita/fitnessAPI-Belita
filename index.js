@@ -17,7 +17,7 @@ const corsOptions = {
   
     origin: [
         'http://localhost:3000',
-        'https://fitness-app-omega-gray.vercel.app'
+        'https://fitness-app-coral-psi.vercel.app'
     ],
     credentials: true, 
     optionsSuccessStatus: 200 
